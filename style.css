@@ -1,0 +1,332 @@
+/* ========== Font Imports ========== */
+
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+
+/* ========== CSS Variables ========== */
+
+:root {
+  /* ===== Colors ===== */
+
+  --gray-color: #333333;
+  --red-color: #a63232;
+  --silver-color: #6e7e8a;
+  --teal-color: #2c7873;
+  --yellow-color: #daa520;
+  --white-color: #f8f8f8;
+}
+
+/* ========== Base ========== */
+
+* {
+  margin: 0;
+  padding: 0;
+  color: var(--gray-color);
+  text-decoration: none;
+  font-family: "Montserrat", sans-serif;
+  font-size: 1rem;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--white-color);
+}
+
+button {
+  border: none;
+  outline: none;
+}
+
+h1 {
+  font-size: 3rem;
+}
+
+h2 {
+  font-size: 1.25rem;
+}
+
+/* ========== Reusable Classes ========== */
+
+.highlight {
+  color: var(--red-color);
+}
+
+.card-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.card {
+  margin: 1rem;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  background: var(--white-color);
+  box-shadow: 5px 5px 3px 0px rgba(0, 0, 0, 0.1);
+  width: 360px;
+  height: 402px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: transform 0.3s;
+}
+
+.card:hover {
+  transform: scale(1.05);
+}
+
+.card-highlight {
+  border: 4px solid var(--red-color);
+  scale: 1.05;
+  height: 406px;
+}
+
+.card-title {
+  margin-top: 1rem;
+  margin-bottom: 0.5rem;
+}
+
+/* ===== Button Styles ===== */
+
+.btn {
+  background: var(--red-color);
+  color: var(--white-color);
+  font-weight: 600;
+  padding: 0.5rem;
+  border: 3px solid transparent;
+  border-radius: 0.5rem;
+  transition: 0.5s;
+}
+
+.btn:hover {
+  background: none;
+  color: var(--red-color);
+  border: 3px solid var(--red-color);
+}
+
+/* ========== Navbar Styles ========== */
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+}
+
+.logo {
+  font-weight: 600;
+  font-size: 1.25rem;
+}
+
+.links .item {
+  padding-left: 15px;
+  font-size: 1.125rem;
+}
+
+/* ========== Hero Section Styles ========== */
+
+.hero {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  padding-top: 5rem;
+  padding-bottom: 5rem;
+  margin-left: 30rem;
+}
+
+.hero-highlight {
+  font-size: 4rem;
+}
+
+/* ========== Service Section Styles ========== */
+
+.services {
+  background: #fff;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+
+.content {
+  margin-top: 1rem;
+  margin-bottom: 0;
+}
+
+.price {
+  padding-bottom: 1rem;
+}
+
+.content .item {
+  margin-bottom: 0.5rem;
+}
+
+.card .bottom {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 50%;
+}
+
+.faq {
+  display: flex;
+  justify-content: space-evenly;
+  margin-top: 1rem;
+}
+
+.faq .left {
+  width: 40%;
+}
+
+.faq .title {
+  margin-bottom: 0.5rem;
+}
+
+.faq .answer {
+  margin-bottom: 2rem;
+}
+
+.faq-container {
+  margin-top: 1rem;
+  padding-right: 2rem;
+  border-right: 2px solid var(--red-color);
+}
+
+.faq .right {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+}
+
+.faq .right .money-header {
+  font-size: 10rem;
+  margin-bottom: 1rem;
+}
+
+.faq .right p {
+  font-size: 1.25rem;
+  font-weight: 600;
+}
+
+.faq .payment-methods {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.faq .payment-methods i {
+  font-size: 5rem;
+  padding: 1rem;
+  transition: 0.3s;
+}
+
+.faq .payment-methods i:hover {
+  color: var(--red-color);
+  transform: scale(1.05);
+}
+
+.testimonials {
+  background: #fff;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  padding-right: 5rem;
+  padding-left: 5rem;
+}
+
+.review-wrapper {
+  display: flex;
+  justify-content: center;
+}
+
+.review {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 2rem;
+  margin: 1rem;
+  border-radius: 0.5rem;
+  background: var(--white-color);
+  box-shadow: 5px 5px 3px 0px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s;
+}
+
+.review:hover {
+  transform: scale(1.05);
+}
+
+.review .name {
+  margin-bottom: 1rem;
+  font-size: 1.25rem;
+}
+
+.img-wrapper {
+  overflow: hidden;
+  width: 15rem;
+  height: 15rem;
+  border-radius: 50%;
+  margin-bottom: 1rem;
+  display: flex;
+  justify-content: center;
+}
+
+img {
+  transition: transform 0.3s;
+}
+
+img:hover {
+  transform: scale(1.05);
+}
+
+.contact {
+  background: #fff;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.contact h2 {
+  margin-bottom: 0.5rem;
+}
+
+.contact p {
+  width: 50%;
+}
+
+.contact .btn {
+  margin: 1rem;
+}
+
+.about {
+  display: flex;
+  justify-content: center;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+
+.about-card {
+  background: #fff;
+  padding: 2rem;
+  margin: 1rem;
+  text-align: center;
+}
+
+.about-card h2 {
+  margin-bottom: 0.5rem;
+}
+
+.about-card ul {
+  list-style: none;
+}
+
+.about-card li {
+  margin-bottom: 0.5rem;
+}
